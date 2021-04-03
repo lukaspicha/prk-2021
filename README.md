@@ -9,5 +9,5 @@ fce kalkulačky:
 ```
 lex calculator.l
 yacc -d calculator.y
-cc lex.yy.c y.tab.c -o calcualator 
+cc lex.yy.c y.tab.c -o calculator 
 ```
