@@ -104,7 +104,7 @@ int getOpposite(int n) {
     
 int main(void) {
     printf("%s\n", "Calculator. Follow the instructions. For exit type exit.");
-    printf("%s\n", "Supported operations: only positive and negative integers and these operands + - * / ln() exp() and (). Spaces and tabs will be ignored.");
+    printf("%s\n", "Supported operations: only positive and negative integers and these operands + - * / fi(int) and (). Spaces and tabs will be ignored.");
     yyparse();
     return 0;
 }
