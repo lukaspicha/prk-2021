@@ -1,0 +1,10 @@
+Calculator. Follow the instructions. For exit type exit.
+Supported operations: only positive and negative integers and these operands + - * / fi(int) and (). Spaces and tabs will be ignored.
+Result: 7
+Result: 57
+Result: 6
+Result: 3
+Result: 2
+Result: -3
+Result: 2
+Result: -10
