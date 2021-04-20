@@ -7,13 +7,6 @@ fce kalkulačky:
   - fce "řecké fí" pfi(number) pro počet dělitelů zadaného čísla, čili prvne udělat prvočíselný rozklad, např pro 648 = (2^3)*(3^4), následně počet dělitelů je d = (3+1)*(4+1) = 20
 
 ```
-lex calculator.l
-yacc -d calculator.y
-cc lex.yy.c y.tab.c -o calculator 
-```
-
-```
-#intestines of makefile
 file = calculator
 
 default:
@@ -26,5 +19,18 @@ run:
 	./bin/$(file)	
 
 clean:
-	rm -r bin lex.yy.c y.tab.c y.tab.h
+	rm -r bin lex.yy.c y.tab.c y.tab.h temp
+
+test:
+	mkdir -p temp
+	./bin/$(file) < tests/test-1 >temp/result-1
+
+	cmp -s temp/result-1 tests/result-test-1
+	RETVAL=$$?; \
+    if [ $$RETVAL -eq 0 ]; then \
+            echo "Test 1 is OK!"; \
+    else \
+            echo "Test 1 is FAILED!"; \
+    fi
+
 ```
